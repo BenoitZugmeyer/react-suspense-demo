@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background-color: #00010a;
+    color: #fdffff;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --gutter: 16px;
+    --small-gutter: 8px;
+}
+
+.sub-text {
+    color: #949aa4;
+    font-size: 13px;
+}
+
+.small-title {
+    color: #949aa4;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: var(--small-gutter);
+}
+
+.box {
+    border: 1px solid #151828;
+    margin: var(--gutter) 0;
+    border-radius: 3px;
+    padding: var(--small-gutter) var(--gutter);
+    background-color: #090e21;
+}

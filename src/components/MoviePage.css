@@ -1,0 +1,50 @@
+.MovieDetails {
+    display: flex;
+    margin-bottom: var(--gutter);
+    align-items: flex-start;
+}
+.MovieDetails h1,
+.MovieDetails .ratings {
+    border-bottom: 2px solid #111629;
+    margin: 0 0 var(--gutter);
+    padding-bottom: var(--gutter);
+}
+.MovieDetails .poster {
+    margin-right: var(--gutter);
+    flex-shrink: 0;
+}
+.MovieDetails .ratings {
+    display: flex;
+}
+
+.Rating {
+    flex: 1;
+    text-align: center;
+}
+
+.Rating:not(:last-child) {
+    margin-right: var(--gutter);
+}
+
+.Rating .rating-score {
+    margin-top: var(--small-gutter);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.MovieReviews {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(var(--gutter) / -2);
+    align-items: flex-start;
+}
+
+.MovieReview {
+    flex: 1;
+    min-width: 200px;
+    margin: calc(var(--gutter) / 2);
+}
+
+.MovieReview .sub-text {
+    margin-top: var(--small-gutter);
+}

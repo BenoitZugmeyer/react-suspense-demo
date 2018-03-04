@@ -1,0 +1,36 @@
+.spinner {
+    /* If it is displayed in a flex container */
+    align-self: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner::before {
+    content: "";
+    display: inline-block;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.spinner-small::before {
+    width: 24px;
+    height: 24px;
+}
+
+.spinner-medium::before {
+    width: 50px;
+    height: 50px;
+}
+
+.spinner-large::before {
+    width: 100px;
+    height: 100px;
+}

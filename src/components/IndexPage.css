@@ -1,0 +1,30 @@
+.IndexPage h1 {
+    margin: 0;
+}
+
+.Movie {
+    cursor: pointer;
+    transition: transform .5s;
+    display: flex;
+    align-items: center;
+}
+
+.Movie .content {
+    flex: 1;
+}
+
+.Movie:hover {
+    background-color: #0d142f;
+}
+
+.Movie:not(.loading):hover::after {
+    content: "🡲";
+}
+
+.Movie .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.Movie.loading  {
+    transform: scale(0.97);
+}
