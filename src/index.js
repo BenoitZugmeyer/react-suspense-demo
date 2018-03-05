@@ -3,6 +3,4 @@ import ReactDOM from "react-dom";
 import App from "./components/App";
 import "./index.css";
 
-const container = document.createElement("div");
-document.body.appendChild(container);
-ReactDOM.render(<AsyncMode><App /></AsyncMode>, container);
+ReactDOM.render(<AsyncMode><App /></AsyncMode>, document.querySelector("#main"));

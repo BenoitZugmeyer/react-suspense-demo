@@ -37,7 +37,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "React Suspense Demo"
+      template: "./src/index.html"
     })
   ]
 };
