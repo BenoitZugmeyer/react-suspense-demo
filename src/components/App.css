@@ -8,6 +8,8 @@
     cursor: pointer;
     font-size: 32px;
     margin-bottom: var(--gutter);
+    transform: scaleX(-1);
+    text-align: right;
 }
 
 .AppSpinner {

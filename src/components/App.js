@@ -36,7 +36,7 @@ export default class App extends Component {
         <div>
           {showDetail && (
             <div className="back-link" onClick={this.handleBackClick}>
-              🡰
+              ➜
             </div>
           )}
           <Placeholder delayMs={1500} fallback={<AppSpinner />}>
