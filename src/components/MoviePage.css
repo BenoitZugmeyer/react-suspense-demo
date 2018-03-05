@@ -11,7 +11,12 @@
 }
 .MovieDetails .poster {
     margin-right: var(--gutter);
-    flex-shrink: 0;
+}
+.MovieDetails .poster img {
+    width: 100%;
+}
+.MovieDetails .details {
+    flex: 1;
 }
 .MovieDetails .ratings {
     display: flex;

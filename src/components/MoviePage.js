@@ -60,8 +60,10 @@ function MovieDetails({ movieId }) {
 
   return (
     <div className="MovieDetails">
-      <Img className="poster" src={posters.detailed} alt="poster" />
-      <div>
+      <div className="poster">
+        <Img src={posters.detailed} alt="poster" />
+      </div>
+      <div className="details">
         <h1>{title}</h1>
         <div className="ratings">
           <Rating
