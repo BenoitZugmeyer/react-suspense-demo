@@ -13,9 +13,11 @@ function Rating({ label, score, icon }) {
   return (
     <div className="Rating">
       <div className="small-title">{label}</div>
-      <div>
-        <Icon type={icon} size="medium" />
-      </div>
+      {icon && (
+        <div>
+          <Icon type={icon} size="medium" />
+        </div>
+      )}
       <div className="rating-score">{score}%</div>
     </div>
   );
