@@ -70,6 +70,7 @@ export default function Icon({ type, size = "small" }) {
   type = type.toLowerCase().replace(/[^a-z]+/g, "");
   if (type === "certifiedfresh") type = "certified";
   if (type === "popcorn") type = "upright";
+  if (type === "anticipated") type = "wts";
   const { styles, size: sizePx } = ICONS[size];
   if (!styles.hasOwnProperty(type)) {
     throw new Error(`Invalid icon type "${type}"`);
