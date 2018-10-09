@@ -8,6 +8,10 @@ rules:
     strict: off
     react/prop-types: off
 
+settings:
+    react:
+        version: "15.0"
+
 env:
     es6: true
     browser: true
