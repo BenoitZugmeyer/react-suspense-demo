@@ -1,11 +1,11 @@
 import React from "react";
+import { unstable_createResource as createResource } from "react-cache";
 import { fetchMovies } from "../api";
-import { createFetcher } from "../future";
 import Icon from "./Icon";
 import Spinner from "./Spinner";
 import "./IndexPage.css";
 
-const MoviesFetcher = createFetcher(fetchMovies);
+const MoviesFetcher = createResource(fetchMovies);
 
 function Score({ score, icon }) {
   if (score === null || score < 0) return null;

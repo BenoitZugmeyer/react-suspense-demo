@@ -15,3 +15,7 @@ settings:
 env:
     es6: true
     browser: true
+
+settings:
+    react:
+        version: detect

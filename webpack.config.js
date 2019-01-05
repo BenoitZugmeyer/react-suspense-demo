@@ -9,9 +9,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "docs")
   },
-  resolve: {
-    modules: ["node_modules", "react-modules"]
-  },
   module: {
     rules: [
       {
@@ -20,7 +17,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules|react-modules/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {

@@ -1,10 +1,9 @@
-import React from "react";
-import { Component, Placeholder, createFetcher } from "../future";
+import React, { Suspense, Component, lazy } from "react";
 import Spinner from "./Spinner";
 import IndexPage from "./IndexPage";
 import "./App.css";
 
-const moviePageFetcher = createFetcher(() => import("./MoviePage"));
+const MoviePage = lazy(() => import("./MoviePage"));
 
 function AppSpinner() {
   return (
@@ -12,11 +11,6 @@ function AppSpinner() {
       <Spinner size="large" />
     </div>
   );
-}
-
-function MoviePageLoader(props) {
-  const MoviePage = moviePageFetcher.read().default;
-  return <MoviePage {...props} />;
 }
 
 export default class App extends Component {
@@ -39,27 +33,26 @@ export default class App extends Component {
               ➜
             </div>
           )}
-          <Placeholder delayMs={1500} fallback={<AppSpinner />}>
+          <Suspense maxDuration={1500} fallback={<AppSpinner />}>
             {!showDetail ? (
               <IndexPage
                 loadingMovieId={currentMovieId}
                 onMovieClick={this.handleMovieClick}
               />
             ) : (
-              <MoviePageLoader movieId={currentMovieId} />
+              <MoviePage movieId={currentMovieId} />
             )}
-          </Placeholder>
+          </Suspense>
         </div>
       </div>
     );
   }
 
   handleMovieClick = movieId => {
-    this.setState({ currentMovieId: movieId });
-    this.deferSetState({ showDetail: true });
+    this.setState({ currentMovieId: movieId, showDetail: true });
   };
 
   handleBackClick = () => {
-    this.deferSetState({ currentMovieId: null, showDetail: false });
+    this.setState({ currentMovieId: null, showDetail: false });
   };
 }
