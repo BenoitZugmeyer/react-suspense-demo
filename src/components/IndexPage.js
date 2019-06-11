@@ -36,7 +36,7 @@ function Movie({
         <div className="title">{title}</div>
         <div className="sub-text">
           <Score icon={tomatoIcon} score={tomatoScore} /> ·{" "}
-          <Score icon={popcornIcon} score={popcornScore} /> ·{" "}
+          {popcornIcon && <><Score icon={popcornIcon} score={popcornScore} /> ·{" "}</>}
           {theaterReleaseDate}
         </div>
       </div>
